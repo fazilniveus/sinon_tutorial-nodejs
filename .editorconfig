@@ -1,0 +1,12 @@
+root = true
+
+[{src,scripts}/**.{ts,json,js}]
+charset = utf-8
+indent_style = space
+indent_size = 2
+
+
+[{test,scripts}/**.{ts,json,js}]
+charset = utf-8
+indent_style = space
+indent_size = 2
