@@ -33,6 +33,8 @@ pipeline {
         	steps{
         		withSonarQubeEnv('sonarqube-9.7.1') { 
 				//sh "npm run coverage-lcov"
+				sh "mocha -R mocha-sonar-reporter"
+				sh "npm test"
 				sh "npm run sonar"
 				
     			  }
