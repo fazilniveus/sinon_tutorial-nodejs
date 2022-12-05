@@ -10,10 +10,6 @@ pipeline {
                 CLUSTER_NAME = 'network18-cluster'
                 LOCATION = 'us-central1-a'
                 CREDENTIALS_ID = 'kubernetes'	
-		PROJECTKEY= 'divya'
-        	SONARURL = 'http://34.93.6.57:9000'
-        	LOGIN= 'sqp_a55bf37bb99312d47c13e62b1aab5c005e6e27bd'
-		
 		
 
 	}
@@ -37,8 +33,9 @@ pipeline {
         	steps{
         		withSonarQubeEnv('sonarqube-9.7.1') { 
               			sh "npm install sonar-scanner"
-				sh "npm test sonar"
-                    		
+				
+				sh "npm install --save --dev mocha chai"
+                    		sh "npm run sonar"
     			  }
         	}
         }
