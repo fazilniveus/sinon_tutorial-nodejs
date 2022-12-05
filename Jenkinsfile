@@ -25,6 +25,7 @@ pipeline {
               steps {
                   echo 'building the software'
 		  sh 'rm package-lock.json'
+		  sh 'rm -rf node_modules"
                   sh 'npm install'
               }
       }
