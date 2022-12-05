@@ -37,9 +37,7 @@ pipeline {
 				
 				sh "npm install --save --dev mocha chai"
 				sh "npm run test"
-				sh "npm i nyc -D"
-				sh "npm run nyc"
-				sh "npm run coverage-lcov"
+				//sh "npm run coverage-lcov"
                     		sh "npm run sonar"
     			  }
         	}
