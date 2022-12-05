@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "sonar":"sonar-scanner",
-    "test": "mocha"
+    "test": "mocha",
+    "coverage": "./node_modules/.bin/nyc -r cobertura -r text-summary -r html npm test",
+    "coverage-lcov": "./node_modules/.bin/nyc -r cobertura -r text-summary -r lcov npm test"
   },
   "author": "",
   "license": "ISC",
