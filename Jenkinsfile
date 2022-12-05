@@ -10,9 +10,7 @@ pipeline {
                 CLUSTER_NAME = 'network18-cluster'
                 LOCATION = 'us-central1-a'
                 CREDENTIALS_ID = 'kubernetes'	
-		PROJECTKEY= 'springcicddemo'
-        	SONARURL = 'http://34.93.6.57:9000'
-        	LOGIN= 'sqp_05378a0d407f7b463717bdc0755e4c5965ff0bf8'
+		
 		
 
 	}
