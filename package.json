@@ -33,5 +33,5 @@
       "classnameSuffix": ".js",
       "outputfile": "test/TEST-all.xml"
     }
-  },
+  }
 }
