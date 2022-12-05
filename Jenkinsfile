@@ -38,7 +38,7 @@ pipeline {
         		withSonarQubeEnv('sonarqube-9.7.1') { 
               			sh "npm install sonar-scanner"
 				sh "npm test"
-                    		sh 'npm run coverage -- -Dsonar.login=$LOGIN  -Dsonar.host.url=$SONARURL'
+                    		sh 'npm run sonar'
     			  }
         	}
         }
