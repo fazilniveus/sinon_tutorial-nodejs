@@ -25,7 +25,11 @@ pipeline {
               steps {
                   echo 'building the software'
 		  //sh 'npm install --save-dev mocha-sonar-reporter'
-                  sh 'npm install'
+		  sh "npm install mocha-sonar-generic-test-coverage --save-dev"
+		  sh "mocha --reporter mocha-sonar-generic-test-coverage test"
+		  sh 'npm install'
+		  sh "npm test"
+                  
               }
       }
       
@@ -33,9 +37,7 @@ pipeline {
         	steps{
         		withSonarQubeEnv('sonarqube-9.7.1') { 
 				//sh "npm run coverage-lcov"
-				sh "npm install mocha-sonar-generic-test-coverage --save-dev"
-				sh "mocha --reporter mocha-sonar-generic-test-coverage test"
-				sh "npm test"
+				
 				sh "npm run sonar"
 				
     			  }
