@@ -11,9 +11,9 @@ pipeline {
                 LOCATION = 'us-central1-a'
                 CREDENTIALS_ID = 'kubernetes'	
 		
-		PROJECTKEY= 'network'
+		PROJECTKEY= 'divya'
         	SONARURL = 'http://34.93.6.57:9000'
-        	LOGIN= 'sqp_f741d02efb6d27d1a32f33fba69855545cdfc646'
+        	LOGIN= 'sqp_a55bf37bb99312d47c13e62b1aab5c005e6e27bd'
 	}
 	
     stages {
