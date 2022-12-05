@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app/index.js",
+    "nyc: "nyc",
     "sonar":"sonar-scanner",
     "test": "mocha",
     "coverage": "./node_modules/.bin/nyc -r cobertura -r text-summary -r html npm test",
