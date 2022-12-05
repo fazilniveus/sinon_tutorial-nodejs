@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "sonar":"sonar-scanner",
     "test": "mocha"
   },
   "author": "",
