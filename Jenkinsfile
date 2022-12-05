@@ -24,7 +24,7 @@ pipeline {
       stage('build') {
               steps {
                   echo 'building the software'
-		  
+		  sh 'npm install --save-dev mocha-sonar-reporter'
                   sh 'npm install'
               }
       }
