@@ -35,7 +35,7 @@ pipeline {
         	steps{
         		withSonarQubeEnv('sonarqube-9.7.1') { 
               			sh "npm install sonar-scanner"
-                    sh "npm run sonar -Dsonar.login=“admin” -Dsonar.login=“sonar”"
+                    sh "npm run sonar sonar.login=“admin” sonar.login=“sonar”"
     			  }
         	}
         }
