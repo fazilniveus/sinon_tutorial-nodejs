@@ -24,8 +24,7 @@ pipeline {
       stage('build') {
               steps {
                   echo 'building the software'
-		  sh 'rm package-lock.json'
-		  sh 'rm -rf node_modules'
+		  
                   sh 'npm install'
               }
       }
@@ -33,12 +32,6 @@ pipeline {
        stage('SonarQube analysis') {
         	steps{
         		withSonarQubeEnv('sonarqube-9.7.1') { 
-              			sh "npm install sonar-scanner"
-				
-				sh "npm install --save --dev mocha chai"
-				sh "npm install --save-dev sonarqube-scanner"
-				sh "npm run test"
-				//sh "npm run coverage-lcov"
                     		sh "npm run sonar"
     			  }
         	}
