@@ -26,7 +26,7 @@ pipeline {
                   echo 'building the software'
 		  //sh 'npm install --save-dev mocha-sonar-reporter'
 		  sh "npm install mocha-sonar-generic-test-coverage --save-dev"
-		  sh "mocha --reporter mocha-sonar-generic-test-coverage test"
+		 // sh "mocha --reporter mocha-sonar-generic-test-coverage test"
 		  sh 'npm install'
 		  sh "npm test"
                   
