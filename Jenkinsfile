@@ -34,6 +34,7 @@ pipeline {
         	steps{
         		withSonarQubeEnv('sonarqube-9.7.1') { 
               			sh "npm install sonar-scanner"
+				sh "npm test"
                     		sh "npm run sonar"
     			  }
         	}
