@@ -7,11 +7,13 @@
     "sonar":"sonar-scanner",
     "sonar":  "node_modules/sonar-scanner/bin/sonar-scanner",
     "test": "mocha",
-    "test": "cross-env PORT=4000 NODE_ENV=test nyc --reporter=lcov  mocha test/**.test.js --timeout=15000000 --exit"
+    "test": "node -v && export TEST=true && nyc --check-coverage=false --reporter=lcov --reporter=text mocha --timeout 10000 --exit",
+
     "coverage": "./node_modules/.bin/nyc -r cobertura -r text-summary -r html npm test",
     "coverage-lcov": "./node_modules/.bin/nyc -r cobertura -r text-summary -r lcov npm test"
     
   },
+
   "author": "",
   "license": "ISC",
   "dependencies": {
